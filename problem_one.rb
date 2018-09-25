@@ -1,0 +1,1 @@
+# Given an integer array of size N, compute the sum of all even numbers in this array.

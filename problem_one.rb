@@ -2,6 +2,10 @@
 
 class ProblemOne
   def sumEven(array)
-    return 0
+    sum = 0
+    array.each do |item|
+      sum += item if item % 2 == 0
+    end
+    return sum
   end
 end

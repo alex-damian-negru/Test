@@ -6,14 +6,14 @@
 # - Try to find a solution by executing just one loop.
 
 class ProblemThree
-  def find_duplicates(array)
+  def duplicates?(array)
     for i in 1..array.length do
-      if array[array[i-1].abs-1] > 0
-        array[array[i-1].abs-1] = -array[array[i-1].abs-1]
-      else
-        return 'true'
+      return true if array[array[i - 1].abs - 1] < 0
+
+      if array[array[i - 1].abs - 1] > 0
+        array[array[i - 1].abs - 1] *= -1
       end
     end
-    return 'false'
+    false
   end
 end

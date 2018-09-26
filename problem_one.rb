@@ -2,10 +2,6 @@
 
 class ProblemOne
   def sum_even(array)
-    sum = 0
-    array.each do |item|
-      sum += item if item.even?
-    end
-    sum
+    array.select(&:even?).reduce(:+)
   end
 end

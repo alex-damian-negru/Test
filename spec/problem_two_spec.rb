@@ -4,7 +4,7 @@ describe ProblemTwo do
   it 'should have as input a minimum of 2 numbers' do
     test_input = [5]
     p_two = ProblemTwo.new
-    expect(p_two.max_two(test_input)).to eq('Invalid input')
+    expect{p_two.max_two(test_input)}.to raise_error(RuntimeError)
   end
 
   it 'should identify the largest 2 numbers' do

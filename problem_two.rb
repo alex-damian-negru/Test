@@ -2,6 +2,10 @@
 
 class ProblemTwo
   def max_two(array)
-    array.max(2)
+    if array.length >= 2
+      array.max(2)
+    else
+      'Invalid input'
+    end
   end
 end

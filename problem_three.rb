@@ -7,5 +7,13 @@
 
 class ProblemThree
   def find_duplicates(array)
+    for i in 1..array.length do
+      if array[array[i-1].abs-1] > 0
+        array[array[i-1].abs-1] = -array[array[i-1].abs-1]
+      else
+        return 'true'
+      end
+    end
+    return 'false'
   end
 end

@@ -8,6 +8,9 @@
 class ProblemThree
   def duplicates?(array)
     for i in 1..array.length do
+
+      raise "array#{[i - 1]}=#{array[i - 1]} outside 1 and #{array.length}" \
+        if array[i - 1].abs > array.length
       return true if array[array[i - 1].abs - 1] < 0
 
       if array[array[i - 1].abs - 1] > 0

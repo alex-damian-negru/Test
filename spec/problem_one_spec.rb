@@ -12,4 +12,10 @@ describe ProblemOne do
     test_input = [2, 8, 12, 10, 128, 64, 32]
     expect(po.sum_even(test_input)).to eq(256)
   end
+
+  it 'should compute the sum of all even numbers for a set of odd numbers' do
+    po = ProblemOne.new
+    test_input = [1, 5, 11, 3, 1337, 9]
+    expect(po.sum_even(test_input)).to eq(0)
+  end
 end

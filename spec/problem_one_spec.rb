@@ -24,4 +24,10 @@ describe ProblemOne do
     test_input = [7, -2, 3, 16, -10, -21, 100, 57, 131]
     expect(po.sum_even(test_input)).to eq(104)
   end
+
+  it 'should compute for an empty sum' do
+    po = ProblemOne.new
+    test_input = []
+    expect(po.sum_even(test_input)).to eq(0)
+  end
 end

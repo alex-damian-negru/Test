@@ -2,6 +2,6 @@
 
 class ProblemTwo
   def max_two(array)
-    array.max(2)
+    array.select{ |x| x.is_a? Integer }.max(2)
   end
 end

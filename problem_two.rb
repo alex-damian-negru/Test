@@ -2,9 +2,6 @@
 
 class ProblemTwo
   def max_two(array)
-    raise 'Invalid input: array must contain at least two numbers' \
-      if array.length < 2
-
     array.max(2)
   end
 end

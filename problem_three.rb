@@ -7,12 +7,12 @@
 
 class ProblemThree
   def duplicates?(array)
-    for i in 1..array.length do
-      raise "array#{[i - 1]}=#{array[i - 1]} outside 1 and #{array.length}" \
-        if array[i - 1].abs > array.length
-      return true if array[array[i - 1].abs - 1] < 0
+    array.each_with_index do |_, index|
+      raise "array#{[index - 1]}=#{array[index - 1]} outside 1 and #{array.length}" \
+        if array[index - 1].abs > array.length
+      return true if array[array[index - 1].abs - 1] < 0
 
-      array[array[i - 1].abs - 1] > 0 && array[array[i - 1].abs - 1] *= -1
+      array[array[index - 1].abs - 1] > 0 && array[array[index - 1].abs - 1] *= -1
     end
     false
   end

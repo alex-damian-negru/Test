@@ -14,9 +14,4 @@ describe ProblemThree do
     duplicates = p_three.duplicates?(set_no_duplicates)
     expect(duplicates).to eq(false)
   end
-
-  it 'does not contain numbers greater than the array length' do
-    set_out_of_bounds = [12, 4, 1, 6, 4, 1, 7, 9, 3, 10]
-    expect { p_three.duplicates?(set_out_of_bounds) }.to raise_error(RuntimeError)
-  end
 end

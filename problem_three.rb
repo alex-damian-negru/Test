@@ -12,8 +12,9 @@ class ProblemThree
       if array[array[index - 1].abs - 1] < 0
         has_duplicate = true
         break
+      else
+        array[array[index - 1].abs - 1] *= -1
       end
-      array[array[index - 1].abs - 1] > 0 && array[array[index - 1].abs - 1] *= -1
     end
     has_duplicate
   end

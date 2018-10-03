@@ -7,11 +7,14 @@
 
 class ProblemThree
   def duplicates?(array)
+    has_duplicate = false
     array.each_with_index do |_, index|
-      return true if array[array[index - 1].abs - 1] < 0
-
+      if array[array[index - 1].abs - 1] < 0
+        has_duplicate = true
+        break
+      end
       array[array[index - 1].abs - 1] > 0 && array[array[index - 1].abs - 1] *= -1
     end
-    false
+    has_duplicate
   end
 end

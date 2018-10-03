@@ -2,6 +2,7 @@
 
 class ProblemOne
   def sum_even(array)
-    array.select(&:even?).reduce(:+) || 0
+    sum = array.select(&:even?).reduce(:+)
+    sum.nil? ? 0 : sum
   end
 end

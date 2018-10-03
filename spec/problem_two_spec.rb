@@ -1,7 +1,7 @@
 require_relative '../problem_two'
 
 describe ProblemTwo do
-  let(:p_two) { $p_two = ProblemTwo.new }
+  let(:p_two) { ProblemTwo.new }
 
   it 'identifies the largest 2 positive numbers' do
     test_input = [1, 7, 12, 3, 62, 26, 19, 128, 30, 64]

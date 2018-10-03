@@ -1,7 +1,7 @@
 require_relative '../problem_one'
 
 describe ProblemOne do
-  let(:p_one) { $p_one = ProblemOne.new }
+  let(:p_one) { ProblemOne.new }
 
   it 'computes for a set of even numbers' do
     test_input = [2, 8, 12, 10, 128, 64, 32]

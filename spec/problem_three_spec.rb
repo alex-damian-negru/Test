@@ -1,7 +1,7 @@
 require_relative '../problem_three'
 
 describe ProblemThree do
-  let(:p_three) { $p_three = ProblemThree.new }
+  let(:p_three) { ProblemThree.new }
 
   it 'determines if there are duplicates' do
     test_input = [3, 4, 1, 6, 4, 1, 7, 9, 3, 10]

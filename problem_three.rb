@@ -9,11 +9,12 @@ class ProblemThree
   def duplicates?(array)
     has_duplicate = false
     array.each_with_index do |_, index|
-      if array[array[index - 1].abs - 1].negative?
+      value = array[index - 1].abs - 1
+      if array[value].negative?
         has_duplicate = true
         break
       else
-        array[array[index - 1].abs - 1] *= -1
+        array[value] *= -1
       end
     end
     has_duplicate

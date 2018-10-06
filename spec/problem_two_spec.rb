@@ -16,5 +16,10 @@ describe '#max_two' do
   end
 
   context 'with numbers and letters' do
+    it 'finds the largest 2 numbers' do
+      mixed_input = ['a', 'c', 'b', 100, -26, 'z', 10]
+      mixed_largest = max_two(mixed_input)
+      expect(mixed_largest).to eq([100, 10])
+    end
   end
 end
